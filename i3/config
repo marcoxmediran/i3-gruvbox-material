@@ -131,3 +131,6 @@ client.focused          $fg			$fg			$bg     $fg     	$fg
 client.focused_inactive $aqua       $aqua       $bg     $aqua       $aqua
 client.unfocused        $bg         $bg         $bg     $bg         $bg
 client.urgent           $red        $red        $bg     $red        $red
+
+# Autostart Applications
+exec --no-startup-id xfce4-panel
