@@ -1,2 +1,3 @@
 # i3-gruvbox-material
-My dotfiles for my new setup with i3wm and xfce4-panel
+
+![00.png](https://github.com/Marcox132/i3-gruvbox-material/blob/master/screenshots/00.png)
