@@ -22,7 +22,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -p "Search " -fn "Google Sans-11" -nb "#1d2021" -nf "#d4be98" -sb "#a9b665" -sf "#1d2021"
+bindsym $mod+d exec --no-startup-id dmenu_run -p "Search " -fn "Google Sans-10" -nb "#1d2021" -nf "#d4be98" -sb "#7daea3" -sf "#1d2021"
 #bindsym $mod+d exec --no-startup-id rofi -show run
 
 # change focus
@@ -110,21 +110,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Redshift
-#exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-#exec --no-startup-id redshift -l 14.47:120.94
-# Polybar 
-#exec --no-startup-id polybar gruv
-exec --no-startup-id xfce4-panel --disable-wm-check
-# Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/gruvbox-material-dark.png
-# Compositor
-exec --no-startup-id picom -b --experimental-backends
-# Screenshot binds
-bindsym Print exec --no-startup-id `maim ~/Pictures/Screenshots/$(date +"%F_%T").png`
-bindsym $mod+Print exec --no-startup-id `maim -s ~/Pictures/Screenshots/$(date +"%F_%T").png`
-bindsym $mod+Shift+Print exec --no-startup-id escrotum -r '~/Videos/Records/%Y-%m-%d_%H-%M-%S.webm'
-
 # Border
 default_border pixel 2
 default_floating_border none
@@ -145,36 +130,4 @@ set $darkgray #282828
 client.focused          $fg			$fg			$bg     $fg     	$fg
 client.focused_inactive $aqua       $aqua       $bg     $aqua       $aqua
 client.unfocused        $bg         $bg         $bg     $bg         $bg
-client.urgent           $red        $red        $bg     $red        $red\
-
-# Default App Workspaces
-assign [class="Alacritty"] 1
-assign [class="Brave-browser"] 2
-assign [class="Org.gnome.Nautilus"] 3
-assign [class="Thunar"] 3
-assign [class="vlc"] 3
-assign [class="Gedit"] 3
-assign [class="Eog"] 3
-assign [class="Ristretto"] 3
-assign [class="Evince"] 3
-assign [class="YouTube Music"] 4
-assign [class="Pulseeffects"] 5
-assign [class="Pavucontrol"] 5
-assign [class="Lxappearance"] 5
-assign [class="TelegramDesktop"] 6
-
-# Floating Windows
-for_window [floating] position center
-for_window [class="Pavucontrol"] floating enable
-
-# Application Binds
-bindsym $mod+n exec --no-startup-id thunar
-bindsym $mod+t exec --no-startup-id gedit
-bindsym $mod+b exec --no-startup-id brave --force-device-scale-factor=0.85
-bindsym $mod+m exec --no-startup-id youtube-music
-
-# Media Controls Bindings
-bindsym $mod+i exec --no-startup-id "playerctl previous &"
-bindsym $mod+o exec --no-startup-id "playerctl play-pause &"
-bindsym $mod+p exec --no-startup-id "playerctl next &" 
-
+client.urgent           $red        $red        $bg     $red        $red
